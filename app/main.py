@@ -2,10 +2,10 @@ from flask import Flask, request
 import telegram
 from config import TELEGRAM_API_TOKEN, FLASK_DEBUG
 from bot import ShopListBot
-# from flask_sslify import SSLify
+from flask_sslify import SSLify
 
 app = Flask(__name__)
-# sslify = SSLify(app)
+sslify = SSLify(app)
 
 bot = telegram.Bot(token=TELEGRAM_API_TOKEN)
 
